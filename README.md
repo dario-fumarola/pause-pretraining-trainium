@@ -1,3 +1,7 @@
+# Archived pilot
+
+The owner replaced this pilot on 2026-10-22. Active work moves to [autonomous-compute-trainium](https://github.com/dario-fumarola/autonomous-compute-trainium). All jobs are stopped; hardware qualification did not pass. See [closure](validation/closure_20261022/summary.json). The source and receipts remain here for provenance.
+
 # Pause pretraining on Trainium
 
 Can a language model learn to use extra computation more effectively when it is available from the start of pretraining?

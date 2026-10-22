@@ -1,9 +1,10 @@
 {
-  "compiler_concurrency": 4,
+  "compiler_concurrency": 6,
+  "layout": "four 16-rank groups across all 16 chips",
   "logical_CPUs": 192,
   "python": "3.12.3",
-  "qualified_logical_neuron_cores": 64,
-  "qualified_physical_chips": 16,
+  "qualification_logical_neuron_cores": 64,
+  "qualification_physical_chips": 16,
   "stack_upgraded": false,
   "versions": {
     "libneuronxla": "2.2.17544.0+fb9962bf",

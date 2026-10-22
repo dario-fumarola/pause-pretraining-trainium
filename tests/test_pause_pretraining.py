@@ -180,6 +180,9 @@ def test_whole_instance_source_order_has_no_duplicate_or_missing_targets():
     consumed = [source_indices(step, rank, micro)
         for step in range(6) for micro in range(2) for rank in range(64)]
     assert consumed == list(range(768))
+    grouped = [source_indices(step, rank, micro, world=16, accumulation=8)
+        for step in range(6) for micro in range(8) for rank in range(16)]
+    assert grouped == consumed
 
 
 @pytest.mark.parametrize('value', [torch.tensor([[1, PAUSE_ID]]), torch.tensor([[1]]), torch.tensor([[1., 2.]])])

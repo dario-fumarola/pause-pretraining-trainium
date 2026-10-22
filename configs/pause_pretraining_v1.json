@@ -20,7 +20,7 @@
     "optimizer_steps": 1024,
     "global_batch": 128,
     "micro_batch": 1,
-    "accumulation": 2,
+    "accumulation": 8,
     "late_start_step_zero_based": 512,
     "warmup_steps": 64,
     "peak_lr": 0.0003,
@@ -34,7 +34,9 @@
     "held_out_depth": 16,
     "terminal_checkpoint_only": true,
     "launch_authorized": false,
-    "world_size": 64
+    "world_size": 16,
+    "physical_chips_per_fit": 4,
+    "concurrent_fits": 4
   },
   "qualification": {
     "head_chunk": 128,
@@ -79,15 +81,19 @@
     "visible_cores": "0-63",
     "steps_per_arm": 6,
     "micro_batch": 1,
-    "accumulation": 2,
+    "accumulation": 8,
     "global_batch": 128,
     "head_chunk": 128,
     "items": 768,
     "maximum_total_assigned_chip_hours": 32,
     "maximum_wall_seconds_per_attempt": 2700,
     "maximum_total_attempts_including_single_rank": 6,
-    "compiler_concurrency": 4,
+    "compiler_concurrency": 6,
     "minimum_disk_free_GiB": 35,
-    "minimum_host_available_GiB": 512
+    "minimum_host_available_GiB": 512,
+    "layout": "four identical 16-rank groups, all 16 chips",
+    "world_size_per_group": 16,
+    "group_count": 4,
+    "global_batch_per_group": 128
   }
 }

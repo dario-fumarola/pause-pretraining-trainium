@@ -1,0 +1,29 @@
+{
+  "all_16_observed": true,
+  "assigned_chip_hours": 7.201475746408881,
+  "chip_idle_after": true,
+  "exit_code": -15,
+  "failure": "KeyboardInterrupt()",
+  "minimum_host_available_GiB": 702.1886901855469,
+  "observed_physical_chips": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "total_qualification_assigned_chip_hours": 7.60614216179055,
+  "utc": "2026-10-22T15:57:33+00:00",
+  "wall_seconds": 1620.3320429419982
+}

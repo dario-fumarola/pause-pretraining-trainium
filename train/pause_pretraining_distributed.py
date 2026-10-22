@@ -1,4 +1,4 @@
-"""Whole-instance, 64-rank qualification. Six updates per condition, never science."""
+"""Distributed qualification group. Four groups occupy the whole instance."""
 from __future__ import annotations
 
 import argparse
@@ -21,14 +21,14 @@ from train.artifacts import atomic_json, canonical_hash, sha256_file
 from train.runtime_utils import sampled_fingerprint
 
 
-def source_indices(step, rank, micro, *, world=64):
-    if not (0 <= step < 6 and 0 <= rank < world and 0 <= micro < 2):
+def source_indices(step, rank, micro, *, world=64, accumulation=2):
+    if not (0 <= step < 6 and 0 <= rank < world and 0 <= micro < accumulation):
         raise ValueError('Bounded whole-instance qualification index required')
-    return step*(2*world)+micro*world+rank
+    return step*(accumulation*world)+micro*world+rank
 
 
 def bounded_compiler(root):
-    """Process-local scheduling only: four compilers, original flags/NEFFs.
+    """Process-local scheduling only: six compilers, original flags/NEFFs.
 
     Per-entry cache locks already prevent duplicate compilation. This bounds
     aggregate host memory when different rank-specific graphs compile at once.
@@ -37,7 +37,7 @@ def bounded_compiler(root):
     original = wrapper.compile_cache_entry
     locks = root/'compiler-slots'; locks.mkdir(exist_ok=True)
     def compile_limited(*args, **kwargs):
-        handles = [(locks/str(i)).open('a+b') for i in range(4)]
+        handles = [(locks/str(i)).open('a+b') for i in range(6)]
         selected = None
         try:
             while selected is None:
@@ -69,12 +69,13 @@ def worker(_index, a):
     from train.runtime_compat import configure_runtime, restore_syncfree_device_state
     from train.pause_pretraining_evaluate import greedy_answer
 
-    configure_runtime(); bounded_compiler(a.output.parent)
+    configure_runtime(); bounded_compiler(a.compile_root)
     if not hasattr(torch, 'xla'):
         torch._register_device_module('xla', torch_xla)
     device = torch_xla.device(); rank, world = xr.global_ordinal(), xr.world_size()
-    if world != 64:
-        raise ValueError('The owner-requested full instance requires 64 logical cores')
+    if world != 16:
+        raise ValueError('Each of four whole-instance groups requires 16 logical cores')
+    accumulation = 128//world
     dist.init_process_group('xla', init_method='xla://')
     sync = lambda: torch_xla.sync(wait=True)
     def consensus(ok, message):
@@ -87,8 +88,8 @@ def worker(_index, a):
     consensus(ref['data_sha256'] == sha256_file(a.data) and ref['config_sha256'] == sha256_file(a.config),
               'Reference/data/config identity changed')
     report = {'experiment_id': EXPERIMENT, 'qualification_id': 'whole-instance-v1',
-        'world_size': world, 'physical_chips': 16, 'global_batch': 128,
-        'micro_batch': 1, 'accumulation': 2, 'head_chunk': 128,
+        'world_size': world, 'physical_chips': world//4, 'global_batch': 128,
+        'micro_batch': 1, 'accumulation': accumulation, 'head_chunk': 128,
         'data_sha256': sha256_file(a.data), 'ordered_source_digest': source_digest(rows),
         'parameter_count': ref['parameter_count'], 'arms': {}}
     for arm in ('vanilla', 'early', 'late'):
@@ -106,6 +107,9 @@ def worker(_index, a):
             return original_reduce(*args, **kwargs)
         optimizer._reduce_gradients = counted_reduce
         found_inf = torch.zeros((), device=device); sync()
+        # Return freed initialization arenas; no live tensors/state are changed.
+        import ctypes
+        gc.collect(); ctypes.CDLL(None).malloc_trim(0)
         active = arm == 'early'
         batch = pack(torch.tensor([rows[rank % 2]['ids']]), pauses=active)
         with torch.no_grad():
@@ -127,12 +131,12 @@ def worker(_index, a):
             start = time.monotonic(); loss = 0.; before_reductions = reductions[0]
             master = optimizer.base_optimizer.param_groups[0]['params'][0]
             before = master.reshape(-1)[:32].detach().cpu().clone()
-            for micro in range(2):
-                index = source_indices(step, rank, micro)
+            for micro in range(accumulation):
+                index = source_indices(step, rank, micro, world=world, accumulation=accumulation)
                 batch = pack(torch.tensor([rows[index]['ids']]), pauses=active)
                 ce = objective(backend, batch)
-                (ce.loss/2).backward(); sync()
-                loss += float(ce.loss.detach().cpu())/2
+                (ce.loss/accumulation).backward(); sync()
+                loss += float(ce.loss.detach().cpu())/accumulation
             optimizer.step(found_inf=found_inf); sync()
             norm = float(optimizer.grad_norm.cpu())
             after = master.reshape(-1)[:32].detach().cpu()
@@ -230,7 +234,7 @@ def worker(_index, a):
         del optimizer, original_reduce, model, backend, ce
         gc.collect(); sync(); xm.rendezvous(f'{arm}-closed')
     if rank == 0:
-        report['status'] = 'PASS_WHOLE_INSTANCE_NATIVE_QUALIFICATION'
+        report['status'] = 'PASS_DISTRIBUTED_GROUP_NATIVE_QUALIFICATION'
         atomic_json(a.output/'native-report.json', report)
         print(report['status'], flush=True)
 
@@ -240,6 +244,7 @@ def main():
     p.add_argument('--config', type=Path, default=Path('configs/qwen3_0.6b_architecture.json'))
     p.add_argument('--data', type=Path, required=True)
     p.add_argument('--output', type=Path, required=True)
+    p.add_argument('--compile-root', type=Path, required=True)
     a = p.parse_args()
     rows = json.loads(a.data.read_text())
     if len(rows) != 768 or any(len(r['ids']) != 513 for r in rows):

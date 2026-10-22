@@ -1,0 +1,11 @@
+{
+  "assigned_chip_hours": 0.03002089272861162,
+  "chip_idle_after": true,
+  "exit_code": -15,
+  "failure": "KeyboardInterrupt()",
+  "hardware_process_observed": true,
+  "minimum_host_available_GiB": 957.5889511108398,
+  "total_qualification_assigned_chip_hours": 0.4046664153816689,
+  "utc": "2026-10-22T15:20:50+00:00",
+  "wall_seconds": 108.07521382300183
+}
