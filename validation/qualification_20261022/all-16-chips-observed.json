@@ -1,0 +1,722 @@
+[
+  {
+    "bdf": "0000:cc:00.0",
+    "connected_to": [
+      12,
+      3,
+      4,
+      1
+    ],
+    "cpu_affinity": "48-95,144-191",
+    "instance_id": "i-093530c991697e3c2",
+    "instance_type": "trn2.48xlarge",
+    "logical_neuroncore_config": 2,
+    "memory_size": 103079215104,
+    "nc_count": 4,
+    "neuron_device": 0,
+    "neuron_processes": [
+      {
+        "command": "/home/ubuntu/ema-trainium/.venv/bin/python -B -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=8, pipe_handle=54) --multiprocessing-fork",
+        "neuron_runtime_version": "2.34.10",
+        "pid": 3274251
+      },
+      {
+        "command": "/home/ubuntu/ema-trainium/.venv/bin/python -B -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=8, pipe_handle=70) --multiprocessing-fork",
+        "neuron_runtime_version": "2.34.10",
+        "pid": 3274259
+      },
+      {
+        "command": "/home/ubuntu/ema-trainium/.venv/bin/python -B -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=8, pipe_handle=104) --multiprocessing-fork",
+        "neuron_runtime_version": "2.34.10",
+        "pid": 3274276
+      },
+      {
+        "command": "/home/ubuntu/ema-trainium/.venv/bin/python -B -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=8, pipe_handle=106) --multiprocessing-fork",
+        "neuron_runtime_version": "2.34.10",
+        "pid": 3274277
+      }
+    ],
+    "neuroncore_ids": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "numa_node": "1"
+  },
+  {
+    "bdf": "0000:b5:00.0",
+    "connected_to": [
+      13,
+      0,
+      5,
+      2
+    ],
+    "cpu_affinity": "48-95,144-191",
+    "instance_id": "i-093530c991697e3c2",
+    "instance_type": "trn2.48xlarge",
+    "logical_neuroncore_config": 2,
+    "memory_size": 103079215104,
+    "nc_count": 4,
+    "neuron_device": 1,
+    "neuron_processes": [
+      {
+        "command": "/home/ubuntu/ema-trainium/.venv/bin/python -B -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=8, pipe_handle=24) --multiprocessing-fork",
+        "neuron_runtime_version": "2.34.10",
+        "pid": 3274236
+      },
+      {
+        "command": "/home/ubuntu/ema-trainium/.venv/bin/python -B -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=8, pipe_handle=46) --multiprocessing-fork",
+        "neuron_runtime_version": "2.34.10",
+        "pid": 3274247
+      },
+      {
+        "command": "/home/ubuntu/ema-trainium/.venv/bin/python -B -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=8, pipe_handle=56) --multiprocessing-fork",
+        "neuron_runtime_version": "2.34.10",
+        "pid": 3274252
+      },
+      {
+        "command": "/home/ubuntu/ema-trainium/.venv/bin/python -B -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=8, pipe_handle=60) --multiprocessing-fork",
+        "neuron_runtime_version": "2.34.10",
+        "pid": 3274254
+      }
+    ],
+    "neuroncore_ids": [
+      4,
+      5,
+      6,
+      7
+    ],
+    "numa_node": "1"
+  },
+  {
+    "bdf": "0000:b6:00.0",
+    "connected_to": [
+      14,
+      1,
+      6,
+      3
+    ],
+    "cpu_affinity": "48-95,144-191",
+    "instance_id": "i-093530c991697e3c2",
+    "instance_type": "trn2.48xlarge",
+    "logical_neuroncore_config": 2,
+    "memory_size": 103079215104,
+    "nc_count": 4,
+    "neuron_device": 2,
+    "neuron_processes": [
+      {
+        "command": "/home/ubuntu/ema-trainium/.venv/bin/python -B -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=8, pipe_handle=64) --multiprocessing-fork",
+        "neuron_runtime_version": "2.34.10",
+        "pid": 3274256
+      },
+      {
+        "command": "/home/ubuntu/ema-trainium/.venv/bin/python -B -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=8, pipe_handle=66) --multiprocessing-fork",
+        "neuron_runtime_version": "2.34.10",
+        "pid": 3274257
+      },
+      {
+        "command": "/home/ubuntu/ema-trainium/.venv/bin/python -B -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=8, pipe_handle=76) --multiprocessing-fork",
+        "neuron_runtime_version": "2.34.10",
+        "pid": 3274262
+      },
+      {
+        "command": "/home/ubuntu/ema-trainium/.venv/bin/python -B -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=8, pipe_handle=86) --multiprocessing-fork",
+        "neuron_runtime_version": "2.34.10",
+        "pid": 3274267
+      }
+    ],
+    "neuroncore_ids": [
+      8,
+      9,
+      10,
+      11
+    ],
+    "numa_node": "1"
+  },
+  {
+    "bdf": "0000:cb:00.0",
+    "connected_to": [
+      15,
+      2,
+      7,
+      0
+    ],
+    "cpu_affinity": "48-95,144-191",
+    "instance_id": "i-093530c991697e3c2",
+    "instance_type": "trn2.48xlarge",
+    "logical_neuroncore_config": 2,
+    "memory_size": 103079215104,
+    "nc_count": 4,
+    "neuron_device": 3,
+    "neuron_processes": [
+      {
+        "command": "/home/ubuntu/ema-trainium/.venv/bin/python -B -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=8, pipe_handle=74) --multiprocessing-fork",
+        "neuron_runtime_version": "2.34.10",
+        "pid": 3274261
+      },
+      {
+        "command": "/home/ubuntu/ema-trainium/.venv/bin/python -B -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=8, pipe_handle=82) --multiprocessing-fork",
+        "neuron_runtime_version": "2.34.10",
+        "pid": 3274265
+      },
+      {
+        "command": "/home/ubuntu/ema-trainium/.venv/bin/python -B -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=8, pipe_handle=88) --multiprocessing-fork",
+        "neuron_runtime_version": "2.34.10",
+        "pid": 3274268
+      },
+      {
+        "command": "/home/ubuntu/ema-trainium/.venv/bin/python -B -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=8, pipe_handle=92) --multiprocessing-fork",
+        "neuron_runtime_version": "2.34.10",
+        "pid": 3274270
+      }
+    ],
+    "neuroncore_ids": [
+      12,
+      13,
+      14,
+      15
+    ],
+    "numa_node": "1"
+  },
+  {
+    "bdf": "0000:6f:00.0",
+    "connected_to": [
+      0,
+      7,
+      8,
+      5
+    ],
+    "cpu_affinity": "0-47,96-143",
+    "instance_id": "i-093530c991697e3c2",
+    "instance_type": "trn2.48xlarge",
+    "logical_neuroncore_config": 2,
+    "memory_size": 103079215104,
+    "nc_count": 4,
+    "neuron_device": 4,
+    "neuron_processes": [
+      {
+        "command": "/home/ubuntu/ema-trainium/.venv/bin/python -B -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=8, pipe_handle=62) --multiprocessing-fork",
+        "neuron_runtime_version": "2.34.10",
+        "pid": 3274255
+      },
+      {
+        "command": "/home/ubuntu/ema-trainium/.venv/bin/python -B -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=8, pipe_handle=84) --multiprocessing-fork",
+        "neuron_runtime_version": "2.34.10",
+        "pid": 3274266
+      },
+      {
+        "command": "/home/ubuntu/ema-trainium/.venv/bin/python -B -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=8, pipe_handle=90) --multiprocessing-fork",
+        "neuron_runtime_version": "2.34.10",
+        "pid": 3274269
+      },
+      {
+        "command": "/home/ubuntu/ema-trainium/.venv/bin/python -B -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=8, pipe_handle=94) --multiprocessing-fork",
+        "neuron_runtime_version": "2.34.10",
+        "pid": 3274271
+      }
+    ],
+    "neuroncore_ids": [
+      16,
+      17,
+      18,
+      19
+    ],
+    "numa_node": "0"
+  },
+  {
+    "bdf": "0000:58:00.0",
+    "connected_to": [
+      1,
+      4,
+      9,
+      6
+    ],
+    "cpu_affinity": "0-47,96-143",
+    "instance_id": "i-093530c991697e3c2",
+    "instance_type": "trn2.48xlarge",
+    "logical_neuroncore_config": 2,
+    "memory_size": 103079215104,
+    "nc_count": 4,
+    "neuron_device": 5,
+    "neuron_processes": [
+      {
+        "command": "/home/ubuntu/ema-trainium/.venv/bin/python -B -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=8, pipe_handle=30) --multiprocessing-fork",
+        "neuron_runtime_version": "2.34.10",
+        "pid": 3274239
+      },
+      {
+        "command": "/home/ubuntu/ema-trainium/.venv/bin/python -B -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=8, pipe_handle=80) --multiprocessing-fork",
+        "neuron_runtime_version": "2.34.10",
+        "pid": 3274264
+      },
+      {
+        "command": "/home/ubuntu/ema-trainium/.venv/bin/python -B -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=8, pipe_handle=102) --multiprocessing-fork",
+        "neuron_runtime_version": "2.34.10",
+        "pid": 3274275
+      },
+      {
+        "command": "/home/ubuntu/ema-trainium/.venv/bin/python -B -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=8, pipe_handle=110) --multiprocessing-fork",
+        "neuron_runtime_version": "2.34.10",
+        "pid": 3274279
+      }
+    ],
+    "neuroncore_ids": [
+      20,
+      21,
+      22,
+      23
+    ],
+    "numa_node": "0"
+  },
+  {
+    "bdf": "0000:59:00.0",
+    "connected_to": [
+      2,
+      5,
+      10,
+      7
+    ],
+    "cpu_affinity": "0-47,96-143",
+    "instance_id": "i-093530c991697e3c2",
+    "instance_type": "trn2.48xlarge",
+    "logical_neuroncore_config": 2,
+    "memory_size": 103079215104,
+    "nc_count": 4,
+    "neuron_device": 6,
+    "neuron_processes": [
+      {
+        "command": "/home/ubuntu/ema-trainium/.venv/bin/python -B -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=8, pipe_handle=26) --multiprocessing-fork",
+        "neuron_runtime_version": "2.34.10",
+        "pid": 3274237
+      },
+      {
+        "command": "/home/ubuntu/ema-trainium/.venv/bin/python -B -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=8, pipe_handle=68) --multiprocessing-fork",
+        "neuron_runtime_version": "2.34.10",
+        "pid": 3274258
+      },
+      {
+        "command": "/home/ubuntu/ema-trainium/.venv/bin/python -B -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=8, pipe_handle=78) --multiprocessing-fork",
+        "neuron_runtime_version": "2.34.10",
+        "pid": 3274263
+      },
+      {
+        "command": "/home/ubuntu/ema-trainium/.venv/bin/python -B -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=8, pipe_handle=96) --multiprocessing-fork",
+        "neuron_runtime_version": "2.34.10",
+        "pid": 3274272
+      }
+    ],
+    "neuroncore_ids": [
+      24,
+      25,
+      26,
+      27
+    ],
+    "numa_node": "0"
+  },
+  {
+    "bdf": "0000:6e:00.0",
+    "connected_to": [
+      3,
+      6,
+      11,
+      4
+    ],
+    "cpu_affinity": "0-47,96-143",
+    "instance_id": "i-093530c991697e3c2",
+    "instance_type": "trn2.48xlarge",
+    "logical_neuroncore_config": 2,
+    "memory_size": 103079215104,
+    "nc_count": 4,
+    "neuron_device": 7,
+    "neuron_processes": [
+      {
+        "command": "/home/ubuntu/ema-trainium/.venv/bin/python -B -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=8, pipe_handle=42) --multiprocessing-fork",
+        "neuron_runtime_version": "2.34.10",
+        "pid": 3274245
+      },
+      {
+        "command": "/home/ubuntu/ema-trainium/.venv/bin/python -B -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=8, pipe_handle=100) --multiprocessing-fork",
+        "neuron_runtime_version": "2.34.10",
+        "pid": 3274274
+      },
+      {
+        "command": "/home/ubuntu/ema-trainium/.venv/bin/python -B -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=8, pipe_handle=126) --multiprocessing-fork",
+        "neuron_runtime_version": "2.34.10",
+        "pid": 3274287
+      },
+      {
+        "command": "/home/ubuntu/ema-trainium/.venv/bin/python -B -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=8, pipe_handle=128) --multiprocessing-fork",
+        "neuron_runtime_version": "2.34.10",
+        "pid": 3274288
+      }
+    ],
+    "neuroncore_ids": [
+      28,
+      29,
+      30,
+      31
+    ],
+    "numa_node": "0"
+  },
+  {
+    "bdf": "0000:9b:00.0",
+    "connected_to": [
+      4,
+      11,
+      12,
+      9
+    ],
+    "cpu_affinity": "0-47,96-143",
+    "instance_id": "i-093530c991697e3c2",
+    "instance_type": "trn2.48xlarge",
+    "logical_neuroncore_config": 2,
+    "memory_size": 103079215104,
+    "nc_count": 4,
+    "neuron_device": 8,
+    "neuron_processes": [
+      {
+        "command": "/home/ubuntu/ema-trainium/.venv/bin/python -B -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=8, pipe_handle=32) --multiprocessing-fork",
+        "neuron_runtime_version": "2.34.10",
+        "pid": 3274240
+      },
+      {
+        "command": "/home/ubuntu/ema-trainium/.venv/bin/python -B -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=8, pipe_handle=108) --multiprocessing-fork",
+        "neuron_runtime_version": "2.34.10",
+        "pid": 3274278
+      },
+      {
+        "command": "/home/ubuntu/ema-trainium/.venv/bin/python -B -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=8, pipe_handle=114) --multiprocessing-fork",
+        "neuron_runtime_version": "2.34.10",
+        "pid": 3274281
+      },
+      {
+        "command": "/home/ubuntu/ema-trainium/.venv/bin/python -B -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=8, pipe_handle=134) --multiprocessing-fork",
+        "neuron_runtime_version": "2.34.10",
+        "pid": 3274291
+      }
+    ],
+    "neuroncore_ids": [
+      32,
+      33,
+      34,
+      35
+    ],
+    "numa_node": "0"
+  },
+  {
+    "bdf": "0000:84:00.0",
+    "connected_to": [
+      5,
+      8,
+      13,
+      10
+    ],
+    "cpu_affinity": "0-47,96-143",
+    "instance_id": "i-093530c991697e3c2",
+    "instance_type": "trn2.48xlarge",
+    "logical_neuroncore_config": 2,
+    "memory_size": 103079215104,
+    "nc_count": 4,
+    "neuron_device": 9,
+    "neuron_processes": [
+      {
+        "command": "/home/ubuntu/ema-trainium/.venv/bin/python -B -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=8, pipe_handle=20) --multiprocessing-fork",
+        "neuron_runtime_version": "2.34.10",
+        "pid": 3274234
+      },
+      {
+        "command": "/home/ubuntu/ema-trainium/.venv/bin/python -B -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=8, pipe_handle=48) --multiprocessing-fork",
+        "neuron_runtime_version": "2.34.10",
+        "pid": 3274248
+      },
+      {
+        "command": "/home/ubuntu/ema-trainium/.venv/bin/python -B -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=8, pipe_handle=50) --multiprocessing-fork",
+        "neuron_runtime_version": "2.34.10",
+        "pid": 3274249
+      },
+      {
+        "command": "/home/ubuntu/ema-trainium/.venv/bin/python -B -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=8, pipe_handle=58) --multiprocessing-fork",
+        "neuron_runtime_version": "2.34.10",
+        "pid": 3274253
+      }
+    ],
+    "neuroncore_ids": [
+      36,
+      37,
+      38,
+      39
+    ],
+    "numa_node": "0"
+  },
+  {
+    "bdf": "0000:85:00.0",
+    "connected_to": [
+      6,
+      9,
+      14,
+      11
+    ],
+    "cpu_affinity": "0-47,96-143",
+    "instance_id": "i-093530c991697e3c2",
+    "instance_type": "trn2.48xlarge",
+    "logical_neuroncore_config": 2,
+    "memory_size": 103079215104,
+    "nc_count": 4,
+    "neuron_device": 10,
+    "neuron_processes": [
+      {
+        "command": "/home/ubuntu/ema-trainium/.venv/bin/python -B -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=8, pipe_handle=14) --multiprocessing-fork",
+        "neuron_runtime_version": "2.34.10",
+        "pid": 3274231
+      },
+      {
+        "command": "/home/ubuntu/ema-trainium/.venv/bin/python -B -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=8, pipe_handle=16) --multiprocessing-fork",
+        "neuron_runtime_version": "2.34.10",
+        "pid": 3274232
+      },
+      {
+        "command": "/home/ubuntu/ema-trainium/.venv/bin/python -B -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=8, pipe_handle=34) --multiprocessing-fork",
+        "neuron_runtime_version": "2.34.10",
+        "pid": 3274241
+      },
+      {
+        "command": "/home/ubuntu/ema-trainium/.venv/bin/python -B -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=8, pipe_handle=52) --multiprocessing-fork",
+        "neuron_runtime_version": "2.34.10",
+        "pid": 3274250
+      }
+    ],
+    "neuroncore_ids": [
+      40,
+      41,
+      42,
+      43
+    ],
+    "numa_node": "0"
+  },
+  {
+    "bdf": "0000:9a:00.0",
+    "connected_to": [
+      7,
+      10,
+      15,
+      8
+    ],
+    "cpu_affinity": "0-47,96-143",
+    "instance_id": "i-093530c991697e3c2",
+    "instance_type": "trn2.48xlarge",
+    "logical_neuroncore_config": 2,
+    "memory_size": 103079215104,
+    "nc_count": 4,
+    "neuron_device": 11,
+    "neuron_processes": [
+      {
+        "command": "/home/ubuntu/ema-trainium/.venv/bin/python -B -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=8, pipe_handle=12) --multiprocessing-fork",
+        "neuron_runtime_version": "2.34.10",
+        "pid": 3274228
+      },
+      {
+        "command": "/home/ubuntu/ema-trainium/.venv/bin/python -B -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=8, pipe_handle=28) --multiprocessing-fork",
+        "neuron_runtime_version": "2.34.10",
+        "pid": 3274238
+      },
+      {
+        "command": "/home/ubuntu/ema-trainium/.venv/bin/python -B -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=8, pipe_handle=36) --multiprocessing-fork",
+        "neuron_runtime_version": "2.34.10",
+        "pid": 3274242
+      },
+      {
+        "command": "/home/ubuntu/ema-trainium/.venv/bin/python -B -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=8, pipe_handle=38) --multiprocessing-fork",
+        "neuron_runtime_version": "2.34.10",
+        "pid": 3274243
+      }
+    ],
+    "neuroncore_ids": [
+      44,
+      45,
+      46,
+      47
+    ],
+    "numa_node": "0"
+  },
+  {
+    "bdf": "0000:f8:00.0",
+    "connected_to": [
+      8,
+      15,
+      0,
+      13
+    ],
+    "cpu_affinity": "48-95,144-191",
+    "instance_id": "i-093530c991697e3c2",
+    "instance_type": "trn2.48xlarge",
+    "logical_neuroncore_config": 2,
+    "memory_size": 103079215104,
+    "nc_count": 4,
+    "neuron_device": 12,
+    "neuron_processes": [
+      {
+        "command": "/home/ubuntu/ema-trainium/.venv/bin/python -B -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=8, pipe_handle=18) --multiprocessing-fork",
+        "neuron_runtime_version": "2.34.10",
+        "pid": 3274233
+      },
+      {
+        "command": "/home/ubuntu/ema-trainium/.venv/bin/python -B -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=8, pipe_handle=44) --multiprocessing-fork",
+        "neuron_runtime_version": "2.34.10",
+        "pid": 3274246
+      },
+      {
+        "command": "/home/ubuntu/ema-trainium/.venv/bin/python -B -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=8, pipe_handle=98) --multiprocessing-fork",
+        "neuron_runtime_version": "2.34.10",
+        "pid": 3274273
+      },
+      {
+        "command": "/home/ubuntu/ema-trainium/.venv/bin/python -B -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=8, pipe_handle=120) --multiprocessing-fork",
+        "neuron_runtime_version": "2.34.10",
+        "pid": 3274284
+      }
+    ],
+    "neuroncore_ids": [
+      48,
+      49,
+      50,
+      51
+    ],
+    "numa_node": "1"
+  },
+  {
+    "bdf": "0000:e1:00.0",
+    "connected_to": [
+      9,
+      12,
+      1,
+      14
+    ],
+    "cpu_affinity": "48-95,144-191",
+    "instance_id": "i-093530c991697e3c2",
+    "instance_type": "trn2.48xlarge",
+    "logical_neuroncore_config": 2,
+    "memory_size": 103079215104,
+    "nc_count": 4,
+    "neuron_device": 13,
+    "neuron_processes": [
+      {
+        "command": "/home/ubuntu/ema-trainium/.venv/bin/python -B -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=8, pipe_handle=112) --multiprocessing-fork",
+        "neuron_runtime_version": "2.34.10",
+        "pid": 3274280
+      },
+      {
+        "command": "/home/ubuntu/ema-trainium/.venv/bin/python -B -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=8, pipe_handle=118) --multiprocessing-fork",
+        "neuron_runtime_version": "2.34.10",
+        "pid": 3274283
+      },
+      {
+        "command": "/home/ubuntu/ema-trainium/.venv/bin/python -B -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=8, pipe_handle=124) --multiprocessing-fork",
+        "neuron_runtime_version": "2.34.10",
+        "pid": 3274286
+      },
+      {
+        "command": "/home/ubuntu/ema-trainium/.venv/bin/python -B -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=8, pipe_handle=130) --multiprocessing-fork",
+        "neuron_runtime_version": "2.34.10",
+        "pid": 3274289
+      }
+    ],
+    "neuroncore_ids": [
+      52,
+      53,
+      54,
+      55
+    ],
+    "numa_node": "1"
+  },
+  {
+    "bdf": "0000:e2:00.0",
+    "connected_to": [
+      10,
+      13,
+      2,
+      15
+    ],
+    "cpu_affinity": "48-95,144-191",
+    "instance_id": "i-093530c991697e3c2",
+    "instance_type": "trn2.48xlarge",
+    "logical_neuroncore_config": 2,
+    "memory_size": 103079215104,
+    "nc_count": 4,
+    "neuron_device": 14,
+    "neuron_processes": [
+      {
+        "command": "/home/ubuntu/ema-trainium/.venv/bin/python -B -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=8, pipe_handle=22) --multiprocessing-fork",
+        "neuron_runtime_version": "2.34.10",
+        "pid": 3274235
+      },
+      {
+        "command": "/home/ubuntu/ema-trainium/.venv/bin/python -B -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=8, pipe_handle=40) --multiprocessing-fork",
+        "neuron_runtime_version": "2.34.10",
+        "pid": 3274244
+      },
+      {
+        "command": "/home/ubuntu/ema-trainium/.venv/bin/python -B -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=8, pipe_handle=122) --multiprocessing-fork",
+        "neuron_runtime_version": "2.34.10",
+        "pid": 3274285
+      },
+      {
+        "command": "/home/ubuntu/ema-trainium/.venv/bin/python -B -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=8, pipe_handle=136) --multiprocessing-fork",
+        "neuron_runtime_version": "2.34.10",
+        "pid": 3274292
+      }
+    ],
+    "neuroncore_ids": [
+      56,
+      57,
+      58,
+      59
+    ],
+    "numa_node": "1"
+  },
+  {
+    "bdf": "0000:f7:00.0",
+    "connected_to": [
+      11,
+      14,
+      3,
+      12
+    ],
+    "cpu_affinity": "48-95,144-191",
+    "instance_id": "i-093530c991697e3c2",
+    "instance_type": "trn2.48xlarge",
+    "logical_neuroncore_config": 2,
+    "memory_size": 103079215104,
+    "nc_count": 4,
+    "neuron_device": 15,
+    "neuron_processes": [
+      {
+        "command": "/home/ubuntu/ema-trainium/.venv/bin/python -B -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=8, pipe_handle=72) --multiprocessing-fork",
+        "neuron_runtime_version": "2.34.10",
+        "pid": 3274260
+      },
+      {
+        "command": "/home/ubuntu/ema-trainium/.venv/bin/python -B -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=8, pipe_handle=116) --multiprocessing-fork",
+        "neuron_runtime_version": "2.34.10",
+        "pid": 3274282
+      },
+      {
+        "command": "/home/ubuntu/ema-trainium/.venv/bin/python -B -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=8, pipe_handle=132) --multiprocessing-fork",
+        "neuron_runtime_version": "2.34.10",
+        "pid": 3274290
+      },
+      {
+        "command": "/home/ubuntu/ema-trainium/.venv/bin/python -B -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=8, pipe_handle=138) --multiprocessing-fork",
+        "neuron_runtime_version": "2.34.10",
+        "pid": 3274293
+      }
+    ],
+    "neuroncore_ids": [
+      60,
+      61,
+      62,
+      63
+    ],
+    "numa_node": "1"
+  }
+]
