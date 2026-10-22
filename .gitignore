@@ -1,0 +1,16 @@
+local/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.pt
+*.bin
+*.safetensors
+*.npz
+*.npy
+.env*
+*.key
+*.pem
+.cache/
+neuron_compile_cache/
+log-neuron-cc.txt
+PostSPMDPassesExecutionDuration.txt

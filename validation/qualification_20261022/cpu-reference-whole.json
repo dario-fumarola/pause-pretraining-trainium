@@ -1,0 +1,28 @@
+{
+  "config_sha256": "504a6b58c4271583724e66584b6b7698aea18450209df6b2f7582df0e89cee59",
+  "data_sha256": "057581c84098b526ed515964f55cdda6db46754c4f67381b5426648a68186e11",
+  "head_chunk": 128,
+  "initial_fingerprint": {
+    "parameters": 596049920,
+    "qualification": "Compare at initialization and after CPU/device transfer; also record full source-file SHA256s.",
+    "sampled_parameter_sha256": "da08173a59f73b7840d57e797f1e5f27e56e608d0f7bc86f990622dd73368368"
+  },
+  "ordered_source_digest": "0d7b5033b000a5df206a6d2c0ffb6134a06584ab35fdae3e7114856a697067b0",
+  "parameter_count": 596049920,
+  "references": {
+    "False": {
+      "loss": 12.156071662902832,
+      "per_example": [
+        12.03134536743164,
+        12.280797958374023
+      ]
+    },
+    "True": {
+      "loss": 12.158241271972656,
+      "per_example": [
+        12.03968334197998,
+        12.276799201965332
+      ]
+    }
+  }
+}

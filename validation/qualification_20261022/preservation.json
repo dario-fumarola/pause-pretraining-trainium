@@ -1,0 +1,8 @@
+{
+  "baseline_commit": "d07d89e0348cf1acd76acd1173a90dcd11facf3e",
+  "changed_original_protected_files": [],
+  "original_model_catalog_sha256": "5d45a2e7bf0b247f771c49dcea22ccc1cc58e2f8e6987ab2c920176c05846741",
+  "original_result_report_sha256": "9dd92d5228c9f0eb9cddea531c3af7976312ac88d71ed2f21894f621eef5bb8a",
+  "original_tracked_numerical_sources_configs_and_evidence_checked": 2516,
+  "scope": "Tracked numerical sources/configs/evidence. Original model/optimizer payloads were never written by this assignment; no new whole-asset byte rehash is claimed."
+}

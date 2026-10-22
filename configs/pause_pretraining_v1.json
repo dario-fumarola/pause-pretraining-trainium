@@ -1,0 +1,93 @@
+{
+  "experiment_id": "pause-pretraining-qwen3-0.6b-v1",
+  "status": "QUALIFICATION_ONLY_NO_LARGE_RUN",
+  "model": "Qwen/Qwen3-0.6B-Base architecture, random initialization; no pretrained weights",
+  "arms": [
+    "vanilla",
+    "early",
+    "late"
+  ],
+  "pause_id": 151935,
+  "pause_interval": 128,
+  "pause_count": 16,
+  "source_window_tokens": 513,
+  "predicted_source_tokens_per_window": 512,
+  "proposed_science": {
+    "seeds": [
+      2201,
+      2202
+    ],
+    "optimizer_steps": 1024,
+    "global_batch": 128,
+    "micro_batch": 1,
+    "accumulation": 2,
+    "late_start_step_zero_based": 512,
+    "warmup_steps": 64,
+    "peak_lr": 0.0003,
+    "minimum_lr_ratio": 0.1,
+    "synthetic_fraction_of_windows": 0.25,
+    "train_task_depths": [
+      4,
+      8,
+      12
+    ],
+    "held_out_depth": 16,
+    "terminal_checkpoint_only": true,
+    "launch_authorized": false,
+    "world_size": 64
+  },
+  "qualification": {
+    "head_chunk": 128,
+    "seed": 2200,
+    "steps_per_arm": 6,
+    "micro_batch": 2,
+    "accumulation": 2,
+    "global_batch": 4,
+    "late_start_step_zero_based": 3,
+    "warmup_steps": 2,
+    "peak_lr": 0.0003,
+    "physical_chips": [
+      0
+    ],
+    "visible_cores": "0",
+    "maximum_total_chip_hours": 2.0,
+    "maximum_attempts": 3,
+    "minimum_disk_free_GiB": 35,
+    "minimum_host_available_GiB": 512
+  },
+  "whole_instance_qualification": {
+    "owner_steering": "Use the whole instance, 2026-10-22",
+    "world_size": 64,
+    "physical_chips": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "visible_cores": "0-63",
+    "steps_per_arm": 6,
+    "micro_batch": 1,
+    "accumulation": 2,
+    "global_batch": 128,
+    "head_chunk": 128,
+    "items": 768,
+    "maximum_total_assigned_chip_hours": 32,
+    "maximum_wall_seconds_per_attempt": 2700,
+    "maximum_total_attempts_including_single_rank": 6,
+    "compiler_concurrency": 4,
+    "minimum_disk_free_GiB": 35,
+    "minimum_host_available_GiB": 512
+  }
+}

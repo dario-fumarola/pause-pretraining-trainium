@@ -1,0 +1,9 @@
+{
+  "bytes": 7031645,
+  "exact_match": true,
+  "local_reused_tokenizer_sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+  "model_weights_downloaded": false,
+  "official_tokenizer_sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+  "official_tokenizer_url": "https://huggingface.co/Qwen/Qwen3-0.6B-Base/resolve/main/tokenizer.json",
+  "response_revision": "da87bfb608c14b7cf20ba1ce41287e8de496c0cd"
+}

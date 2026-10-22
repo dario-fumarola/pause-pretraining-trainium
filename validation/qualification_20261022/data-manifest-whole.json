@@ -1,0 +1,15 @@
+{
+  "data_file_sha256": "057581c84098b526ed515964f55cdda6db46754c4f67381b5426648a68186e11",
+  "experiment_id": "pause-pretraining-qwen3-0.6b-v1",
+  "held_out_outcomes_inspected": false,
+  "ordered_source_digest": "0d7b5033b000a5df206a6d2c0ffb6134a06584ab35fdae3e7114856a697067b0",
+  "predicted_real_tokens": 393216,
+  "purpose": "hardware_qualification_not_science",
+  "rows": 768,
+  "source": "/home/ubuntu/dario/local/data/uniform-lm-baseline-v1/QUALIFICATION.jsonl",
+  "source_sha256": "9ef2e07a9390227d5fc5675cd95382e568b6924b15cd49ea27d64042245998a5",
+  "source_tokens": 393984,
+  "synthetic_windows": 192,
+  "tokenizer": "/home/ubuntu/dario/local/assets/qwen3-1.7b-base",
+  "tokenizer_sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539"
+}
